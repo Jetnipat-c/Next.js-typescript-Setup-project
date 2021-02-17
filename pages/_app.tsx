@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "antd/dist/antd.css";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -22,6 +21,15 @@ const theme = {
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <meta charSet="UTF-8" />
+        <title>Digitalize Marketing</title>
+        <meta
+          name="viewport"
+          content="width=device-width,minimum-scale=1,initial-scale=1"
+        />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
+      </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
